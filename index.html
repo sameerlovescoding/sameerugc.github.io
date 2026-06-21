@@ -1,799 +1,555 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sameer Babar — UGC Creator</title>
-  <meta name="description" content="UGC Creator specializing in AI tools, SaaS products, and wellness brands. Worked with Y Combinator startups and global tech brands." />
-
-  <!-- Google Analytics — replace G-XXXXXXXXXX with your real Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sameer Babar — UGC Creator | AI, SaaS & Wellness</title>
+  <meta name="description" content="UGC Creator with 3.9M+ views. Specializing in AI tools, SaaS products, and wellness brands. 9+ brand partnerships including Y Combinator startups.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --cream: #F7F3EE;
-      --cream-dark: #EDE8E0;
-      --sand: #D9CFBF;
-      --taupe: #B5A898;
-      --brown: #7A6A58;
-      --dark: #2A2118;
-      --accent: #C4956A;
-      --accent-light: #F0E4D4;
-      --white: #FDFCFA;
-      --serif: 'Cormorant Garamond', Georgia, serif;
-      --sans: 'DM Sans', system-ui, sans-serif;
+      --bg: #ffffff;
+      --bg-warm: #faf9f7;
+      --bg-cream: #f5f3ef;
+      --text: #1a1a1a;
+      --text-dark: #111;
+      --text-muted: #6b6b6b;
+      --text-light: #8a8a8a;
+      --accent: #c4a052;
+      --accent-dark: #a8863e;
+      --border: #e8e5df;
+      --border-light: #f0ede7;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.06);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.08);
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: var(--sans);
-      background: var(--cream);
-      color: var(--dark);
-      font-size: 16px;
-      line-height: 1.6;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* ── NAV ── */
+    ::selection { background: var(--accent); color: white; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== NAV ===== */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: rgba(247, 243, 238, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--sand);
-      padding: 0 2rem;
-      height: 60px;
+      z-index: 1000;
+      padding: 1.15rem 3rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-light);
+      transition: all 0.3s ease;
     }
 
     .nav-logo {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--dark);
-      letter-spacing: 0.02em;
-      text-decoration: none;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-dark);
     }
+    .nav-logo span { color: var(--accent); }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.8rem;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--brown);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--dark); }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; align-items: center; }
+    .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--text-muted); letter-spacing: 0.02em; transition: color 0.25s; }
+    .nav-links a:hover { color: var(--text-dark); }
 
     .nav-cta {
-      background: var(--dark);
-      color: var(--cream) !important;
-      padding: 0.45rem 1.1rem;
-      border-radius: 2px;
-      font-size: 0.75rem !important;
-      letter-spacing: 0.1em;
-      transition: background 0.2s !important;
+      padding: 0.55rem 1.5rem;
+      background: var(--text-dark);
+      color: white;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s;
+      letter-spacing: 0.01em;
+      border: none;
+      font-family: inherit;
     }
+    .nav-cta:hover { background: var(--accent); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(196,160,82,0.35); }
 
-    .nav-cta:hover { background: var(--accent) !important; color: var(--white) !important; }
-
-    /* ── HERO ── */
-    #hero {
+    /* ===== HERO ===== */
+    .hero {
       min-height: 100vh;
-      padding-top: 60px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: center;
-      max-width: 1200px;
+      gap: 3rem;
+      padding: 8rem 3rem 5rem;
+      max-width: 1300px;
       margin: 0 auto;
-      padding-left: 3rem;
-      padding-right: 3rem;
-      gap: 4rem;
+      align-items: center;
     }
 
-    .hero-text { padding: 2rem 0; }
-
-    .hero-eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.4rem 1rem;
+      background: var(--bg-cream);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-dark);
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--accent);
+      margin-bottom: 1.8rem;
+    }
+    .hero-tag-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse-dot 2s ease-in-out infinite; }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 4.5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.4rem;
+      color: var(--text-dark);
+    }
+    .hero h1 em { font-style: italic; color: var(--accent-dark); }
+
+    .hero-desc {
+      font-size: 1.06rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 2.2rem;
+      max-width: 480px;
+      font-weight: 300;
+    }
+
+    .hero-actions { display: flex; gap: 0.85rem; flex-wrap: wrap; }
+
+    .btn-primary {
+      padding: 0.85rem 2rem;
+      background: var(--text-dark);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.28s;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      letter-spacing: 0.01em;
+    }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(196,160,82,0.35); }
+
+    .btn-outline {
+      padding: 0.85rem 2rem;
+      background: transparent;
+      color: var(--text-dark);
+      border: 1.5px solid var(--border);
+      border-radius: 50px;
+      font-size: 0.88rem;
       font-weight: 500;
-      margin-bottom: 1.2rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.28s;
+      font-family: inherit;
+    }
+    .btn-outline:hover { border-color: var(--text-dark); background: var(--bg-warm); transform: translateY(-2px); }
+
+    /* Hero Image */
+    .hero-right { position: relative; display: flex; justify-content: center; align-items: center; }
+
+    .hero-image-wrap {
+      position: relative;
+      width: 420px;
+      height: 520px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .hero-image-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+
+    .hero-image-accent {
+      position: absolute;
+      bottom: -16px;
+      right: -16px;
+      width: 140px;
+      height: 140px;
+      background: var(--accent);
+      border-radius: 18px;
+      z-index: -1;
+      opacity: 0.65;
+    }
+
+    .hero-float-card {
+      position: absolute;
+      bottom: 30px;
+      left: -30px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem 1.3rem;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      z-index: 10;
+    }
+    .float-icon { width: 38px; height: 38px; border-radius: 10px; background: var(--bg-cream); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+    .float-text strong { display: block; font-size: 0.82rem; font-weight: 700; color: var(--text-dark); }
+    .float-text span { font-size: 0.72rem; color: var(--text-light); }
+
+    /* ===== MARQUEE ===== */
+    .marquee-section {
+      padding: 1.8rem 0;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      background: var(--bg-warm);
+      overflow: hidden;
+    }
+    .marquee-track {
+      display: flex;
+      gap: 3rem;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+    .marquee-item {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-light);
+      white-space: nowrap;
       display: flex;
       align-items: center;
       gap: 0.6rem;
     }
+    .marquee-item::after { content: '·'; color: var(--accent); font-size: 1.2rem; opacity: 0.5; }
 
-    .hero-eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 24px;
-      height: 1px;
-      background: var(--accent);
-    }
+    /* ===== ABOUT ===== */
+    .about-section { padding: 7rem 3rem; max-width: 1100px; margin: 0 auto; }
 
-    .hero-h1 {
-      font-family: var(--serif);
-      font-size: clamp(2.8rem, 5vw, 4.2rem);
-      font-weight: 500;
-      line-height: 1.1;
-      color: var(--dark);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-h1 em {
-      font-style: italic;
-      color: var(--accent);
-    }
-
-    .hero-sub {
-      font-size: 1rem;
-      color: var(--brown);
-      line-height: 1.7;
-      max-width: 420px;
-      margin-bottom: 2.5rem;
-      font-weight: 300;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--dark);
-      color: var(--cream);
-      padding: 0.75rem 1.8rem;
-      border-radius: 2px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-
-    .btn-primary:hover { background: var(--accent); }
-
-    .btn-secondary {
-      border: 1px solid var(--sand);
-      color: var(--brown);
-      padding: 0.75rem 1.8rem;
-      border-radius: 2px;
-      font-size: 0.8rem;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: border-color 0.2s, color 0.2s;
-    }
-
-    .btn-secondary:hover { border-color: var(--brown); color: var(--dark); }
-
-    .hero-stats {
-      display: flex;
-      gap: 2.5rem;
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--cream-dark);
-    }
-
-    .stat-item { }
-
-    .stat-num {
-      font-family: var(--serif);
-      font-size: 1.9rem;
-      font-weight: 500;
-      color: var(--dark);
-      line-height: 1;
-    }
-
-    .stat-label {
+    .section-label {
       font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--taupe);
-      margin-top: 0.25rem;
-    }
-
-    /* Hero image side */
-    .hero-image-wrap {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-    }
-
-    .hero-photo-frame {
-      position: relative;
-      width: 100%;
-      max-width: 440px;
-    }
-
-    .hero-photo-bg {
-      position: absolute;
-      inset: 1.5rem -1.5rem -1.5rem 1.5rem;
-      background: var(--accent-light);
-      border-radius: 2px;
-      z-index: 0;
-    }
-
-    .hero-photo {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      object-position: top center;
-      border-radius: 2px;
-      display: block;
-    }
-
-    .hero-tag {
-      position: absolute;
-      bottom: 2rem;
-      left: -1.5rem;
-      z-index: 2;
-      background: var(--white);
-      border: 1px solid var(--sand);
-      padding: 0.8rem 1.2rem;
-      border-radius: 2px;
-      font-size: 0.75rem;
-      font-weight: 400;
-      color: var(--brown);
-      letter-spacing: 0.06em;
-    }
-
-    .hero-tag strong {
-      display: block;
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--dark);
-      letter-spacing: 0;
-    }
-
-    /* ── TICKER ── */
-    .ticker-wrap {
-      background: var(--dark);
-      overflow: hidden;
-      padding: 0.9rem 0;
-    }
-
-    .ticker {
-      display: flex;
-      width: max-content;
-      animation: ticker 28s linear infinite;
-    }
-
-    .ticker-item {
-      font-size: 0.72rem;
+      font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--taupe);
-      padding: 0 2.5rem;
-      white-space: nowrap;
+      color: var(--accent-dark);
+      margin-bottom: 0.6rem;
     }
-
-    .ticker-item span {
-      color: var(--accent);
-      margin-right: 2.5rem;
-    }
-
-    @keyframes ticker {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-
-    /* ── SECTION SHARED ── */
-    section { padding: 6rem 0; }
-
-    .section-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 3rem;
-    }
-
-    .section-eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 500;
-      margin-bottom: 0.8rem;
-    }
-
     .section-title {
-      font-family: var(--serif);
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      font-weight: 500;
-      color: var(--dark);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 700;
       line-height: 1.15;
+      letter-spacing: -0.03em;
       margin-bottom: 1rem;
+      color: var(--text-dark);
     }
+    .section-sub { font-size: 1.02rem; color: var(--text-muted); line-height: 1.8; max-width: 560px; font-weight: 300; }
 
-    .section-title em { font-style: italic; color: var(--accent); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3.5rem; align-items: start; }
 
-    .section-sub {
-      font-size: 0.95rem;
-      color: var(--brown);
-      max-width: 520px;
-      line-height: 1.7;
-      font-weight: 300;
-    }
-
-    /* ── ABOUT ── */
-    #about { background: var(--white); }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 5rem;
-      align-items: center;
-    }
-
-    .about-image-stack {
-      position: relative;
-    }
-
+    .about-photos { margin-bottom: 1.8rem; }
     .about-photo-main {
       width: 100%;
-      aspect-ratio: 4/5;
-      object-fit: cover;
-      object-position: top;
-      border-radius: 2px;
-      display: block;
+      height: 380px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
     }
+    .about-photo-main img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
 
-    .about-accent-box {
-      position: absolute;
-      top: -1rem;
-      right: -1rem;
-      width: 40%;
-      aspect-ratio: 1;
-      background: var(--accent-light);
-      border-radius: 2px;
-      z-index: -1;
-    }
+    .about-bio p { font-size: 0.98rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.3rem; font-weight: 300; }
+    .about-bio p strong { color: var(--text-dark); font-weight: 600; }
 
-    .about-content { }
+    .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border-radius: 14px; overflow: hidden; margin-top: 2rem; }
+    .stat-box { background: var(--bg-warm); padding: 1.5rem 1rem; text-align: center; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--accent-dark); line-height: 1; }
+    .stat-label { font-size: 0.72rem; color: var(--text-light); margin-top: 0.35rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500; }
 
-    .about-body {
-      font-size: 1rem;
-      color: var(--brown);
-      line-height: 1.8;
-      font-weight: 300;
-      margin: 1.5rem 0 2rem;
-    }
+    .about-details { background: var(--bg-warm); border: 1px solid var(--border); border-radius: 18px; padding: 2.2rem; }
+    .detail-item { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--border-light); }
+    .detail-item:last-child { border-bottom: none; }
+    .detail-icon { width: 42px; height: 42px; border-radius: 11px; background: white; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0; }
+    .detail-info strong { display: block; font-size: 0.82rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.15rem; }
+    .detail-info span { font-size: 0.78rem; color: var(--text-light); }
 
-    .about-body strong { color: var(--dark); font-weight: 500; }
-
-    .about-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .chip {
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--brown);
-      border: 1px solid var(--sand);
-      padding: 0.35rem 0.9rem;
-      border-radius: 2px;
-    }
-
-    /* ── BRANDS ── */
-    #brands { background: var(--cream); }
-
-    .brands-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .brands-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1px;
-      background: var(--sand);
-      border: 1px solid var(--sand);
-    }
-
-    .brand-card {
-      background: var(--cream);
-      padding: 2rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      transition: background 0.2s;
-    }
-
-    .brand-card:hover { background: var(--white); }
-
-    .brand-icon {
-      width: 40px;
-      height: 40px;
-      background: var(--accent-light);
-      border-radius: 50%;
-      display: flex;
+    .response-badge {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      font-family: var(--serif);
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.2rem;
+      background: white;
+      border: 1px solid var(--accent);
+      border-radius: 12px;
     }
+    .response-badge i { color: var(--accent-dark); font-size: 1rem; }
+    .response-badge span { font-size: 0.82rem; font-weight: 600; color: var(--text-dark); }
+    .response-badge small { display: block; font-size: 0.72rem; color: var(--text-light); font-weight: 400; }
 
-    .brand-name {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--dark);
+    /* ===== ANALYTICS / PROOF ===== */
+    .analytics-section {
+      padding: 7rem 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-top: 1px solid var(--border-light);
     }
-
-    .brand-desc {
-      font-size: 0.78rem;
-      color: var(--taupe);
-      letter-spacing: 0.04em;
-    }
-
-    .brand-tag {
-      display: inline-block;
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      border: 1px solid var(--accent-light);
-      background: var(--accent-light);
-      padding: 0.2rem 0.6rem;
-      border-radius: 2px;
-      margin-top: auto;
-    }
-
-    /* ── ANALYTICS ── */
-    #analytics { background: var(--dark); }
-
-    #analytics .section-eyebrow { color: var(--accent); }
-    #analytics .section-title { color: var(--cream); }
-    #analytics .section-sub { color: var(--taupe); }
+    .analytics-header { text-align: center; margin-bottom: 3.5rem; }
+    .analytics-header .section-sub { margin: 0 auto; }
 
     .analytics-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
-      margin-top: 3rem;
     }
 
     .analytics-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 2px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
       overflow: hidden;
+      transition: all 0.35s;
     }
-
-    .analytics-img {
+    .analytics-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.07);
+      border-color: rgba(196,160,82,0.2);
+    }
+    .analytics-card img {
       width: 100%;
-      aspect-ratio: 9/16;
-      object-fit: cover;
+      height: auto;
       display: block;
     }
-
-    .analytics-meta {
-      padding: 1.2rem 1rem;
-    }
-
     .analytics-views {
-      font-family: var(--serif);
-      font-size: 2rem;
-      font-weight: 500;
-      color: var(--cream);
-      line-height: 1;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent-dark);
+      letter-spacing: -0.02em;
     }
+    .analytics-label { font-size: 0.78rem; color: var(--text-light); margin-top: 0.2rem; font-weight: 500; }
 
-    .analytics-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--taupe);
-      margin-top: 0.3rem;
-    }
+    /* ===== PORTFOLIO / BRANDS ===== */
+    .portfolio-section { padding: 7rem 3rem; max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--border-light); }
+    .portfolio-header { text-align: center; margin-bottom: 3.5rem; }
+    .portfolio-header .section-sub { margin: 0 auto; }
 
-    .analytics-note {
-      font-size: 0.8rem;
-      color: rgba(181,168,152,0.7);
-      margin-top: 0.5rem;
-      font-weight: 300;
-    }
+    .brand-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; }
 
-    .analytics-stat-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .analytics-stat {
+    .brand-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.85rem;
       text-align: center;
-      padding: 1.5rem;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 2px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+      cursor: default;
     }
-
-    .analytics-stat-num {
-      font-family: var(--serif);
-      font-size: 2.4rem;
-      font-weight: 500;
-      color: var(--accent);
-      line-height: 1;
+    .brand-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(196,160,82,0.04), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.35s;
     }
+    .brand-card:hover { border-color: rgba(196,160,82,0.3); transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.07); }
+    .brand-card:hover::before { opacity: 1; }
 
-    .analytics-stat-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--taupe);
-      margin-top: 0.4rem;
-    }
+    .brand-inner { position: relative; z-index: 1; width: 100%; }
+    .brand-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.2rem; }
+    .brand-cat { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-dark); background: var(--bg-cream); padding: 0.2rem 0.55rem; border-radius: 4px; }
+    .brand-arrow { font-size: 0.68rem; color: var(--text-light); opacity: 0; transition: opacity 0.3s; }
+    .brand-card:hover .brand-arrow { opacity: 1; }
 
-    /* ── WHY ── */
-    #why { background: var(--white); }
+    .brand-logo { width: 80px; height: 80px; border-radius: 14px; background: white; border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: center; margin: 0.5rem auto; overflow: hidden; transition: all 0.35s; padding: 6px; }
+    .brand-card:hover .brand-logo { border-color: rgba(196,160,82,0.2); box-shadow: 0 0 20px rgba(196,160,82,0.08); }
+    .brand-logo img { width: 100%; height: 100%; object-fit: contain; }
+    .brand-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 0.95rem; letter-spacing: -0.01em; color: var(--text-dark); }
+    .brand-desc { font-size: 0.76rem; color: var(--text-light); line-height: 1.4; }
 
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
+    /* ===== WHY ===== */
+    .why-section { padding: 7rem 3rem; max-width: 1100px; margin: 0 auto; border-top: 1px solid var(--border-light); }
+    .why-header { text-align: center; margin-bottom: 3.5rem; }
+    .why-header .section-sub { margin: 0 auto; }
+
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; }
 
     .why-card {
-      padding: 2rem;
-      border: 1px solid var(--cream-dark);
-      border-radius: 2px;
-      transition: border-color 0.2s, transform 0.2s;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2.2rem 1.8rem;
+      transition: all 0.35s;
+      position: relative;
+      overflow: hidden;
     }
-
-    .why-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
+    .why-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.35s;
     }
+    .why-card:hover { border-color: rgba(196,160,82,0.25); box-shadow: 0 16px 44px rgba(0,0,0,0.06); transform: translateY(-4px); }
+    .why-card:hover::after { opacity: 1; }
 
-    .why-num {
-      font-family: var(--serif);
-      font-size: 3rem;
-      font-weight: 400;
-      color: var(--cream-dark);
-      line-height: 1;
+    .why-icon { width: 52px; height: 52px; border-radius: 13px; background: var(--bg-cream); border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; margin-bottom: 1.4rem; }
+    .why-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.6rem; color: var(--text-dark); }
+    .why-card p { font-size: 0.87rem; color: var(--text-muted); line-height: 1.75; font-weight: 300; }
+
+    /* ===== CONTACT ===== */
+    .contact-section { padding: 7rem 3rem; max-width: 1100px; margin: 0 auto; border-top: 1px solid var(--border-light); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; }
+
+    .contact-left h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
       margin-bottom: 1rem;
+      color: var(--text-dark);
     }
+    .contact-left > p { font-size: 0.96rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
 
-    .why-title {
-      font-family: var(--serif);
-      font-size: 1.3rem;
-      font-weight: 500;
-      color: var(--dark);
-      margin-bottom: 0.75rem;
+    .contact-list { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
+    .contact-item { display: flex; align-items: center; gap: 0.9rem; }
+    .contact-item-icon { width: 42px; height: 42px; border-radius: 11px; background: var(--bg-cream); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.88rem; flex-shrink: 0; color: var(--accent-dark); }
+    .contact-item-text { font-size: 0.88rem; color: var(--text-muted); }
+    .contact-item-text a { color: var(--text-dark); font-weight: 500; transition: color 0.2s; }
+    .contact-item-text a:hover { color: var(--accent-dark); }
+
+    .social-row { display: flex; gap: 0.7rem; }
+    .social-btn { width: 42px; height: 42px; border-radius: 11px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.92rem; color: var(--text-muted); transition: all 0.22s; text-decoration: none; }
+    .social-btn:hover { border-color: var(--accent); color: var(--accent-dark); background: var(--bg-cream); }
+
+    /* FORM */
+    .form-card { background: var(--bg-warm); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; }
+    .form-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--text-dark); }
+    .form-sub { font-size: 0.82rem; color: var(--text-light); margin-bottom: 2rem; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .field { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1rem; }
+    .field label { font-size: 0.72rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; }
+    .field input, .field textarea, .field select {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      font-size: 0.9rem;
+      font-family: inherit;
+      color: var(--text-dark);
+      outline: none;
+      transition: all 0.22s;
+      resize: vertical;
     }
+    .field input::placeholder, .field textarea::placeholder { color: #bbb; }
+    .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(196,160,82,0.08); }
 
-    .why-body {
-      font-size: 0.88rem;
-      color: var(--brown);
-      line-height: 1.7;
-      font-weight: 300;
-    }
-
-    /* ── CONTACT ── */
-    #contact { background: var(--cream); }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
-    .contact-left { }
-
-    .contact-detail {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-      margin-top: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--cream-dark);
-    }
-
-    .contact-detail-icon {
-      width: 36px;
-      height: 36px;
-      background: var(--accent-light);
-      border-radius: 50%;
+    .submit-row { display: flex; gap: 0.8rem; margin-top: 0.3rem; align-items: center; }
+    .submit-btn {
+      flex: 1;
+      padding: 0.9rem;
+      background: var(--text-dark);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.25s;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.85rem;
-      flex-shrink: 0;
+      gap: 0.5rem;
+      letter-spacing: 0.01em;
     }
+    .submit-btn:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(196,160,82,0.35); }
+    .submit-note { font-size: 0.72rem; color: var(--text-light); text-align: center; margin-top: 0.8rem; }
 
-    .contact-detail-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--taupe);
-      margin-bottom: 0.25rem;
-    }
-
-    .contact-detail-value {
-      font-size: 0.95rem;
-      color: var(--dark);
-      font-weight: 400;
-    }
-
-    .contact-form { }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      margin-bottom: 1rem;
-    }
-
-    .form-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--brown);
-    }
-
-    .form-input, .form-select, .form-textarea {
-      font-family: var(--sans);
-      font-size: 0.9rem;
-      color: var(--dark);
-      background: var(--white);
-      border: 1px solid var(--sand);
-      border-radius: 2px;
-      padding: 0.65rem 0.9rem;
-      outline: none;
-      transition: border-color 0.2s;
-      width: 100%;
-    }
-
-    .form-input:focus, .form-select:focus, .form-textarea:focus {
-      border-color: var(--accent);
-    }
-
-    .form-textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .form-submit {
-      background: var(--dark);
-      color: var(--cream);
-      border: none;
-      padding: 0.85rem 2.5rem;
-      font-family: var(--sans);
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      cursor: pointer;
-      border-radius: 2px;
-      transition: background 0.2s;
-      width: 100%;
-      margin-top: 0.5rem;
-    }
-
-    .form-submit:hover { background: var(--accent); }
-
-    /* ── FOOTER ── */
+    /* ===== FOOTER ===== */
     footer {
-      background: var(--dark);
-      padding: 3rem;
-      text-align: center;
-    }
-
-    .footer-logo {
-      font-family: var(--serif);
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: var(--cream);
-      margin-bottom: 1rem;
-    }
-
-    .footer-links {
+      border-top: 1px solid var(--border-light);
+      padding: 2.2rem 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: var(--text-light);
     }
+    footer a { color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--accent-dark); }
 
-    .footer-links a {
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--taupe);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    /* ===== REVEAL ===== */
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: 0.06s; }
+    .reveal-d2 { transition-delay: 0.13s; }
+    .reveal-d3 { transition-delay: 0.2s; }
+    .reveal-d4 { transition-delay: 0.27s; }
+    .reveal-d5 { transition-delay: 0.34s; }
+    .reveal-d6 { transition-delay: 0.41s; }
+    .reveal-d7 { transition-delay: 0.48s; }
+    .reveal-d8 { transition-delay: 0.55s; }
+    .reveal-d9 { transition-delay: 0.62s; }
 
-    .footer-links a:hover { color: var(--accent); }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.75); } }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-    .footer-copy {
-      font-size: 0.78rem;
-      color: rgba(181,168,152,0.5);
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      #hero {
-        grid-template-columns: 1fr;
-        padding-top: 80px;
-        text-align: center;
-        gap: 2.5rem;
-      }
-
-      .hero-eyebrow { justify-content: center; }
-      .hero-sub { margin: 0 auto 2rem; }
-      .hero-actions { justify-content: center; }
-      .hero-stats { justify-content: center; }
-      .hero-image-wrap { order: -1; }
-      .hero-photo-frame { max-width: 320px; }
-      .hero-tag { left: 0.5rem; bottom: 1rem; }
-
-      .about-grid { grid-template-columns: 1fr; }
-      .about-image-stack { max-width: 360px; margin: 0 auto; }
-
-      .analytics-grid { grid-template-columns: 1fr; }
-      .analytics-stat-row { grid-template-columns: 1fr; }
-
-      .why-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .form-row { grid-template-columns: 1fr; }
-
+    @media (max-width: 960px) {
+      nav { padding: 1rem 1.5rem; }
       .nav-links { display: none; }
-      .section-inner { padding: 0 1.5rem; }
-      #hero { padding-left: 1.5rem; padding-right: 1.5rem; }
-      .brands-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; text-align: center; }
+      .hero-right { order: -1; margin-bottom: 2rem; }
+      .hero-image-wrap { width: 320px; height: 400px; margin: 0 auto; }
+      .hero-float-card { display: none; }
+      .hero-desc { margin: 0 auto 2.2rem; }
+      .hero-actions { justify-content: center; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .brand-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .analytics-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .why-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 0.6rem; text-align: center; padding: 2rem 1.5rem; }
+      section { padding: 5rem 1.5rem !important; }
+    }
+    @media (max-width: 560px) {
+      .brand-grid, .analytics-grid { grid-template-columns: 1fr; }
+      .hero-image-wrap { width: 260px; height: 330px; }
+      .about-stats { grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 </head>
@@ -801,351 +557,346 @@
 
   <!-- NAV -->
   <nav>
-    <a class="nav-logo" href="#">Sameer Babar</a>
+    <div class="nav-logo">Sameer<span>.</span></div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#brands">Work</a></li>
-      <li><a href="#analytics">Results</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#proof">Proof</a></li>
       <li><a href="#why">Why Me</a></li>
-      <li><a href="#contact" class="nav-cta">Book Me</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
+    <a href="#contact" class="nav-cta">Book Me</a>
   </nav>
 
   <!-- HERO -->
-  <section id="hero">
-    <div class="hero-text">
-      <p class="hero-eyebrow">UGC Creator · AI · SaaS · Wellness</p>
-      <h1 class="hero-h1">Content that<br><em>converts,</em><br>not just scrolls.</h1>
-      <p class="hero-sub">I'm Sameer — I create authentic short-form content for AI tools, SaaS products, and wellness brands. 9+ brands. Real results.</p>
+  <section class="hero">
+    <div class="hero-left reveal">
+      <div class="hero-tag"><span class="hero-tag-dot"></span>Available for new projects</div>
+      <h1>Scroll-stopping<br>UGC for brands<br>that <em>mean business.</em></h1>
+      <p class="hero-desc">I'm Sameer — a UGC creator specializing in AI tools, SaaS products, and wellness brands. I turn product stories into content that actually converts.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Work with me</a>
-        <a href="#analytics" class="btn-secondary">See results</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-num">3.9M</div>
-          <div class="stat-label">Top video views</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">9+</div>
-          <div class="stat-label">Brands</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">2–6h</div>
-          <div class="stat-label">Response time</div>
-        </div>
+        <a href="#contact" class="btn-primary">Work with me →</a>
+        <a href="#proof" class="btn-outline">See my numbers</a>
       </div>
     </div>
-    <div class="hero-image-wrap">
-      <div class="hero-photo-frame">
-        <div class="hero-photo-bg"></div>
-        <img src="headshot.jpg" alt="Sameer Babar" class="hero-photo" />
-        <div class="hero-tag">
-          <strong>Available now</strong>
-          Open to new partnerships
+    <div class="hero-right reveal reveal-d2">
+      <div class="hero-image-wrap">
+        <img src="headshot.jpg" alt="Sameer Babar — UGC Creator" loading="eager">
+      </div>
+      <div class="hero-image-accent"></div>
+      <div class="hero-float-card">
+        <div class="float-icon">⚡</div>
+        <div class="float-text">
+          <strong>2–6 hour response</strong>
+          <span>I reply fast. No ghosting.</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TICKER -->
-  <div class="ticker-wrap">
-    <div class="ticker">
-      <span class="ticker-item"><span>✦</span> AI &amp; Tech UGC</span>
-      <span class="ticker-item"><span>✦</span> SaaS Product Content</span>
-      <span class="ticker-item"><span>✦</span> Wellness Brands</span>
-      <span class="ticker-item"><span>✦</span> Y Combinator Startups</span>
-      <span class="ticker-item"><span>✦</span> Short-form Video</span>
-      <span class="ticker-item"><span>✦</span> 3.9M Views</span>
-      <span class="ticker-item"><span>✦</span> Brand Campaigns</span>
-      <span class="ticker-item"><span>✦</span> AI &amp; Tech UGC</span>
-      <span class="ticker-item"><span>✦</span> SaaS Product Content</span>
-      <span class="ticker-item"><span>✦</span> Wellness Brands</span>
-      <span class="ticker-item"><span>✦</span> Y Combinator Startups</span>
-      <span class="ticker-item"><span>✦</span> Short-form Video</span>
-      <span class="ticker-item"><span>✦</span> 3.9M Views</span>
-      <span class="ticker-item"><span>✦</span> Brand Campaigns</span>
+  <!-- MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span class="marquee-item">AI &amp; Tech Content</span>
+      <span class="marquee-item">SaaS Product UGC</span>
+      <span class="marquee-item">Wellness Brands</span>
+      <span class="marquee-item">Y Combinator Startups</span>
+      <span class="marquee-item">Short-form Video</span>
+      <span class="marquee-item">Brand Campaigns</span>
+      <span class="marquee-item">Product Demos</span>
+      <span class="marquee-item">AI &amp; Tech Content</span>
+      <span class="marquee-item">SaaS Product UGC</span>
+      <span class="marquee-item">Wellness Brands</span>
+      <span class="marquee-item">Y Combinator Startups</span>
+      <span class="marquee-item">Short-form Video</span>
+      <span class="marquee-item">Brand Campaigns</span>
+      <span class="marquee-item">Product Demos</span>
     </div>
   </div>
 
   <!-- ABOUT -->
-  <section id="about">
-    <div class="section-inner">
-      <div class="about-grid">
-        <div class="about-image-stack">
-          <img src="headshot.jpg" alt="Sameer Babar" class="about-photo-main" />
-          <div class="about-accent-box"></div>
+  <section id="about" class="about-section">
+    <div class="section-label reveal">About me</div>
+    <h2 class="section-title reveal reveal-d1">Creator. Strategist.<br>Your next brand voice.</h2>
+    <p class="section-sub reveal reveal-d2">Every piece starts with one question — what makes this brand worth talking about?</p>
+
+    <div class="about-grid">
+      <div class="about-bio reveal reveal-d3">
+        <div class="about-photos">
+          <div class="about-photo-main"><img src="headshot2.png" alt="Sameer Babar"></div>
         </div>
-        <div class="about-content">
-          <p class="section-eyebrow">About me</p>
-          <h2 class="section-title">Creator.<br><em>Strategist.</em><br>Brand voice.</h2>
-          <p class="about-body">
-            I'm a UGC creator focused on <strong>AI tools, SaaS products, and wellness brands</strong>. I've worked with 9+ brands — including a Y Combinator-backed startup — creating authentic content that doesn't just look good, it drives action.
-            <br /><br />
-            Every piece I create starts with one question: <em>what makes this brand worth talking about?</em> Then I build around that answer. Fast turnaround, clear communication, no chasing.
-          </p>
-          <div class="about-chips">
-            <span class="chip">AI &amp; Tech</span>
-            <span class="chip">SaaS</span>
-            <span class="chip">Wellness</span>
-            <span class="chip">Short-form Video</span>
-            <span class="chip">Brand Campaigns</span>
-            <span class="chip">UGC</span>
-          </div>
-          <a href="#contact" class="btn-primary">Let's work together</a>
+        <p>I'm a <strong>UGC creator focused on AI tools, SaaS products, and wellness brands</strong>. I've worked with 9+ brands including a Y Combinator-backed startup, creating authentic content that converts.</p>
+        <p>From snappy social clips to full campaign rollouts, I bring a creator's eye and a marketer's brain to every brief. No fluff — just content that moves the needle for your brand.</p>
+        <div class="about-stats">
+          <div class="stat-box"><div class="stat-num">9+</div><div class="stat-label">Brands</div></div>
+          <div class="stat-box"><div class="stat-num">YC</div><div class="stat-label">Backed startup</div></div>
+          <div class="stat-box"><div class="stat-num">3</div><div class="stat-label">Niches</div></div>
         </div>
       </div>
+
+      <div class="about-details reveal reveal-d4">
+        <div class="detail-item">
+          <div class="detail-icon">✉️</div>
+          <div class="detail-info"><strong>Email</strong><span><a href="mailto:sameerbaber1@gmail.com">sameerbaber1@gmail.com</a></span></div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-icon">📱</div>
+          <div class="detail-info"><strong>Phone</strong><span>+1 434-895-5351</span></div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-icon">📍</div>
+          <div class="detail-info"><strong>Location</strong><span>Lynchburg, VA</span></div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-icon">⏱️</div>
+          <div class="detail-info"><strong>Response Time</strong><span>2 – 6 hours</span></div>
+        </div>
+        <div class="response-badge">
+          <i class="fa-solid fa-bolt"></i>
+          <div><span>Fast delivery & response</span><small>No waiting days for a reply or delivery</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANALYTICS / PROOF -->
+  <section id="proof" class="analytics-section">
+    <div class="analytics-header">
+      <div class="section-label reveal">The proof is in the numbers</div>
+      <h2 class="section-title reveal reveal-d1">Content that gets seen.<br>Content that performs.</h2>
+      <p class="section-sub reveal reveal-d2">Real results from real campaigns. These aren't vanity metrics — they're what happens when you understand your audience.</p>
+    </div>
+
+    <div class="analytics-grid">
+
+      <div class="analytics-card reveal reveal-d1">
+        <img src="analytics1.png" alt="3.9M views on AI math content" loading="lazy">
+      </div>
+
+      <div class="analytics-card reveal reveal-d2">
+        <img src="analytics2.png" alt="34.7K views on GTA VI trailer reaction" loading="lazy">
+      </div>
+
+      <div class="analytics-card reveal reveal-d3">
+        <img src="analytics3.png" alt="27.5K views on GTA VI content" loading="lazy">
+      </div>
+
     </div>
   </section>
 
   <!-- BRANDS -->
-  <section id="brands">
-    <div class="section-inner">
-      <div class="brands-header">
-        <div>
-          <p class="section-eyebrow">Portfolio</p>
-          <h2 class="section-title">Brands I've<br><em>worked with.</em></h2>
-        </div>
-        <p class="section-sub">From Y Combinator-backed startups to global tech companies — here's who I've helped tell their story.</p>
-      </div>
-      <div class="brands-grid">
-        <div class="brand-card">
-          <div class="brand-icon">S</div>
+  <section id="work" class="portfolio-section">
+    <div class="portfolio-header">
+      <div class="section-label reveal">Portfolio</div>
+      <h2 class="section-title reveal reveal-d1">Brands I've worked with.</h2>
+      <p class="section-sub reveal reveal-d2">From YC startups to global tech companies — here's who I've helped tell their story.</p>
+    </div>
+
+    <div class="brand-grid">
+
+      <div class="brand-card reveal reveal-d1">
+        <div class="brand-inner">
+          <div class="brand-top"><span class="brand-cat">AI · Edu</span><i class="fa-solid fa-arrow-up-right-from-square brand-arrow"></i></div>
+          <div class="brand-logo"><img src="logo-solvely.png" alt="Solvely.ai"></div>
           <div class="brand-name">Solvely.ai</div>
           <div class="brand-desc">AI Study Tool · 10M+ students</div>
-          <span class="brand-tag">AI · Edu</span>
         </div>
-        <div class="brand-card">
-          <div class="brand-icon">R</div>
-          <div class="brand-name">Replit</div>
-          <div class="brand-desc">Build apps &amp; sites with AI</div>
-          <span class="brand-tag">Tech · YC</span>
-        </div>
-        <div class="brand-card">
-          <div class="brand-icon">M</div>
-          <div class="brand-name">Manus.ai</div>
-          <div class="brand-desc">Hands-on AI · Part of Meta</div>
-          <span class="brand-tag">AI · Meta</span>
-        </div>
-        <div class="brand-card">
-          <div class="brand-icon">CW</div>
+      </div>
+
+      <div class="brand-card reveal reveal-d2">
+        <div class="brand-inner">
+          <div class="brand-top"><span class="brand-cat">Wellness</span><i class="fa-solid fa-arrow-up-right-from-square brand-arrow"></i></div>
+          <div class="brand-logo"><img src="logo-createwellness.png" alt="Create Wellness"></div>
           <div class="brand-name">Create Wellness</div>
           <div class="brand-desc">Health &amp; Wellness Brand</div>
-          <span class="brand-tag">Wellness</span>
         </div>
-        <div class="brand-card">
-          <div class="brand-icon">H</div>
-          <div class="brand-name">Hunyuan 3D</div>
+      </div>
+
+      <a href="https://replit.com" target="_blank" class="brand-card reveal reveal-d3">
+        <div class="brand-inner">
+          <div class="brand-top"><span class="brand-cat">Tech</span><i class="fa-solid fa-arrow-up-right-from-square brand-arrow"></i></div>
+          <div class="brand-logo"><img src="logo-replit.png" alt="Replit"></div>
+          <div class="brand-name">Replit</div>
+          <div class="brand-desc">Build apps &amp; sites with AI</div>
+        </div>
+      </a>
+
+      <a href="https://manus.im" target="_blank" class="brand-card reveal reveal-d4">
+        <div class="brand-inner">
+          <div class="brand-top"><span class="brand-cat">Meta</span><i class="fa-solid fa-arrow-up-right-from-square brand-arrow"></i></div>
+          <div class="brand-logo"><img src="logo-manus.png" alt="Manus AI"></div>
+          <div class="brand-name">Manus.ai</div>
+          <div class="brand-desc">Hands On AI · Part of Meta</div>
+        </div>
+      </a>
+
+      <div class="brand-card reveal reveal-d5">
+        <div class="brand-inner">
+          <div class="brand-top"><span class="brand-cat">3D · Tencent</span><i class="fa-solid fa-arrow-up-right-from-square brand-arrow"></i></div>
+          <div class="brand-logo"><img src="logo-hunyuan.png" alt="Hunyuan Tencent 3D"></div>
+          <div class="brand-name">Hunyuan Tencent 3D</div>
           <div class="brand-desc">AI 3D Generation · Tencent</div>
-          <span class="brand-tag">3D · Tencent</span>
         </div>
-        <div class="brand-card">
-          <div class="brand-icon">VC</div>
+      </div>
+
+      <div class="brand-card reveal reveal-d6">
+        <div class="brand-inner">
+          <div class="brand-top"><span class="brand-cat">Dev · AI</span><i class="fa-solid fa-arrow-up-right-from-square brand-arrow"></i></div>
+          <div class="brand-logo"><img src="logo-vibecode.png" alt="Vibecode App"></div>
           <div class="brand-name">Vibecode App</div>
           <div class="brand-desc">AI-Powered Coding Platform</div>
-          <span class="brand-tag">Dev · AI</span>
         </div>
-        <div class="brand-card">
-          <div class="brand-icon">SA</div>
+      </div>
+
+      <div class="brand-card reveal reveal-d7">
+        <div class="brand-inner">
+          <div class="brand-top"><span class="brand-cat">AI · Search</span><i class="fa-solid fa-arrow-up-right-from-square brand-arrow"></i></div>
+          <div class="brand-logo"><img src="logo-sherlock.png" alt="Sherlock AI"></div>
           <div class="brand-name">Sherlock AI</div>
           <div class="brand-desc">AI Intelligence Platform</div>
-          <span class="brand-tag">AI · Search</span>
         </div>
-        <div class="brand-card">
-          <div class="brand-icon">FA</div>
+      </div>
+
+      <div class="brand-card reveal reveal-d8">
+        <div class="brand-inner">
+          <div class="brand-top"><span class="brand-cat">AI · Creative</span><i class="fa-solid fa-arrow-up-right-from-square brand-arrow"></i></div>
+          <div class="brand-logo"><img src="logo-fictional.png" alt="Fictional AI"></div>
           <div class="brand-name">Fictional AI</div>
           <div class="brand-desc">AI Storytelling Platform</div>
-          <span class="brand-tag">AI · Creative</span>
         </div>
-        <div class="brand-card">
-          <div class="brand-icon">CW</div>
+      </div>
+
+      <a href="https://codewisp.ai" target="_blank" class="brand-card reveal reveal-d9">
+        <div class="brand-inner">
+          <div class="brand-top"><span class="brand-cat" style="background:#fff8e1;color:#b8860b;">YC ✦</span><i class="fa-solid fa-arrow-up-right-from-square brand-arrow"></i></div>
+          <div class="brand-logo"><img src="logo-codewisp.png" alt="CodeWisp AI"></div>
           <div class="brand-name">CodeWisp AI</div>
           <div class="brand-desc">Y Combinator · Game Creation</div>
-          <span class="brand-tag">YC ✦</span>
         </div>
-      </div>
-    </div>
-  </section>
+      </a>
 
-  <!-- ANALYTICS -->
-  <section id="analytics">
-    <div class="section-inner">
-      <p class="section-eyebrow">Real results</p>
-      <h2 class="section-title">Numbers don't<br><em>lie.</em></h2>
-      <p class="section-sub">These aren't stock photos. These are actual view counts from content I've created.</p>
-
-      <div class="analytics-grid">
-        <div class="analytics-card">
-          <img src="analytics3.png" alt="3.9M views video" class="analytics-img" />
-          <div class="analytics-meta">
-            <div class="analytics-views">3.9M</div>
-            <div class="analytics-label">Total views</div>
-            <div class="analytics-note">Solvely.ai — math explainer content</div>
-          </div>
-        </div>
-        <div class="analytics-card">
-          <img src="analytics2.png" alt="34.7K views video" class="analytics-img" />
-          <div class="analytics-meta">
-            <div class="analytics-views">34.7K</div>
-            <div class="analytics-label">Total views</div>
-            <div class="analytics-note">Short-form tech content</div>
-          </div>
-        </div>
-        <div class="analytics-card">
-          <img src="analytics1.png" alt="27.5K views video" class="analytics-img" />
-          <div class="analytics-meta">
-            <div class="analytics-views">27.5K</div>
-            <div class="analytics-label">Total views</div>
-            <div class="analytics-note">Short-form tech content</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="analytics-stat-row">
-        <div class="analytics-stat">
-          <div class="analytics-stat-num">9+</div>
-          <div class="analytics-stat-label">Brands worked with</div>
-        </div>
-        <div class="analytics-stat">
-          <div class="analytics-stat-num">3</div>
-          <div class="analytics-stat-label">Content niches</div>
-        </div>
-        <div class="analytics-stat">
-          <div class="analytics-stat-num">2–6h</div>
-          <div class="analytics-stat-label">Avg. response time</div>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- WHY -->
-  <section id="why">
-    <div class="section-inner">
-      <p class="section-eyebrow">Why work with me</p>
-      <h2 class="section-title">Not just a creator.<br><em>A content partner.</em></h2>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-num">01</div>
-          <div class="why-title">AI &amp; Tech niche expert</div>
-          <p class="why-body">I live in the AI/SaaS space every day. I understand the audience, the language, and what makes technical products click with everyday users. No learning curve, no hand-holding.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-num">02</div>
-          <div class="why-title">Fast turnaround</div>
-          <p class="why-body">I respond and deliver within 2–6 hours. No ghosting, no delays. Your content calendar stays on track because I treat your deadlines like mine.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-num">03</div>
-          <div class="why-title">Content that converts</div>
-          <p class="why-body">Every piece is built with a goal in mind — engagement, sign-ups, downloads, or sales. Pretty is not enough. I make content that actually moves the needle. The views prove it.</p>
-        </div>
+  <section id="why" class="why-section">
+    <div class="why-header">
+      <div class="section-label reveal">Why work with me</div>
+      <h2 class="section-title reveal reveal-d1">Not just a creator.<br>A content partner.</h2>
+      <p class="section-sub reveal reveal-d2">I don't hand over files and disappear. Here's why brands keep coming back.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal reveal-d1">
+        <div class="why-icon">🤖</div>
+        <h3>AI &amp; Tech Niche Expert</h3>
+        <p>I live in the AI/SaaS space every day. I understand the audience, the language, and what makes technical products click with everyday users. Zero learning curve on your end.</p>
+      </div>
+      <div class="why-card reveal reveal-d2">
+        <div class="why-icon">⚡</div>
+        <h3>Fast Turnaround</h3>
+        <p>I respond and deliver within 2–6 hours. No ghosting, no delays. Your content calendar stays on track because I treat your deadlines like mine.</p>
+      </div>
+      <div class="why-card reveal reveal-d3">
+        <div class="why-icon">📈</div>
+        <h3>Content That Converts</h3>
+        <p>Every piece is built with a goal — engagement, sign-ups, downloads, or sales. Pretty is not enough. I make content that actually moves the needle.</p>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
-    <div class="section-inner">
-      <div class="contact-grid">
-        <div class="contact-left">
-          <p class="section-eyebrow">Get in touch</p>
-          <h2 class="section-title">Let's make your<br>next campaign<br><em>unforgettable.</em></h2>
-          <p class="section-sub">Whether it's a one-off project or an ongoing partnership, I'd love to hear what you're building.</p>
+  <section id="contact" class="contact-section">
+    <div class="contact-grid">
 
-          <div class="contact-detail">
-            <div class="contact-detail-icon">✉</div>
-            <div>
-              <div class="contact-detail-label">Email</div>
-              <div class="contact-detail-value">sameerbaber1@gmail.com</div>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-detail-icon">📍</div>
-            <div>
-              <div class="contact-detail-label">Location</div>
-              <div class="contact-detail-value">Lynchburg, VA</div>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-detail-icon">⚡</div>
-            <div>
-              <div class="contact-detail-label">Response time</div>
-              <div class="contact-detail-value">2 to 6 hours</div>
-            </div>
-          </div>
+      <div class="contact-left">
+        <div class="section-label reveal">Get in touch</div>
+        <h3 class="reveal reveal-d1">Let's make your next<br>campaign unforgettable.</h3>
+        <p class="reveal reveal-d2">Whether it's a one-off project or an ongoing partnership, I'd love to hear what you're building. Fill out the form or reach out directly — I respond within 2–6 hours.</p>
+
+        <div class="contact-list reveal reveal-d3">
+          <div class="contact-item"><div class="contact-item-icon">✉️</div><div class="contact-item-text"><a href="mailto:sameerbaber1@gmail.com">sameerbaber1@gmail.com</a></div></div>
+          <div class="contact-item"><div class="contact-item-icon">📱</div><div class="contact-item-text">+1 434-895-5351</div></div>
+          <div class="contact-item"><div class="contact-item-icon">📍</div><div class="contact-item-text">Lynchburg, VA</div></div>
+          <div class="contact-item"><div class="contact-item-icon" style="background:white;border-color:var(--border);color:var(--accent-dark)">⏱️</div><div class="contact-item-text">Responds in 2–6 hours</div></div>
         </div>
 
-        <div class="contact-form">
-          <form onsubmit="handleSubmit(event)">
+        <div class="social-row reveal reveal-d4">
+          <a href="#" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="form-card">
+          <div class="form-title">Send me a message</div>
+          <div class="form-sub">Fill this out and it lands straight in my inbox.</div>
+          <form action="https://formsubmit.co/sameerbaber1@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New UGC Inquiry from Portfolio Site!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" id="formNext" value="">
+            <input type="text" name="_honey" style="display:none">
+
             <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">Full name</label>
-                <input class="form-input" type="text" placeholder="Jane Smith" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Email</label>
-                <input class="form-input" type="email" placeholder="jane@brand.com" required />
-              </div>
+              <div class="field"><label for="name">Full Name</label><input type="text" id="name" name="name" placeholder="Jane Smith" required></div>
+              <div class="field"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="jane@brand.com" required></div>
             </div>
-            <div class="form-group">
-              <label class="form-label">Brand / Company</label>
-              <input class="form-input" type="text" placeholder="Acme Inc." />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Project type</label>
-              <select class="form-select">
-                <option value="">Select a project type</option>
-                <option>UGC Video Content</option>
-                <option>Social Media Campaign</option>
-                <option>Product Demo / Review</option>
-                <option>Brand Partnership</option>
-                <option>Other</option>
+            <div class="field"><label for="brand">Brand / Company</label><input type="text" id="brand" name="brand" placeholder="Your brand name"></div>
+            <div class="field">
+              <label for="project-type">Project Type</label>
+              <select id="project-type" name="project-type" required>
+                <option value="" disabled selected>Select project type</option>
+                <option value="UGC Video">UGC Video Content</option>
+                <option value="Social Media Campaign">Social Media Campaign</option>
+                <option value="Product Demo">Product Demo / Review</option>
+                <option value="Brand Partnership">Brand Partnership</option>
+                <option value="Other">Other</option>
               </select>
             </div>
-            <div class="form-group">
-              <label class="form-label">Tell me about your project</label>
-              <textarea class="form-textarea" placeholder="What are you building? What's the goal?"></textarea>
+            <div class="field"><label for="message">Tell me about your project</label><textarea id="message" name="message" rows="5" placeholder="What are you building? What kind of content do you need?" required></textarea></div>
+            <div class="submit-row">
+              <button type="submit" class="submit-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
             </div>
-            <button type="submit" class="form-submit">Send message →</button>
+            <div class="submit-note">🔒 No spam. Just a real conversation about your project.</div>
           </form>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">Sameer Babar</div>
-    <div class="footer-links">
-      <a href="#about">About</a>
-      <a href="#brands">Work</a>
-      <a href="#analytics">Results</a>
-      <a href="#why">Why Me</a>
-      <a href="#contact">Contact</a>
-      <a href="mailto:sameerbaber1@gmail.com">Email</a>
-    </div>
-    <div class="footer-copy">© 2026 Sameer Babar — UGC Creator</div>
+    <span>© 2025 Sameer Babar — UGC Creator</span>
+    <span style="display:flex;gap:1.5rem;">
+      <a href="mailto:sameerbaber1@gmail.com">sameerbaber1@gmail.com</a>
+      <a href="tel:+14348955351">+1 434-895-5351</a>
+    </span>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
   <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('.form-submit');
-      btn.textContent = 'Message sent ✓';
-      btn.style.background = '#7A6A58';
-      setTimeout(() => {
-        btn.textContent = 'Send message →';
-        btn.style.background = '';
-        e.target.reset();
-      }, 3000);
-    }
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    reveals.forEach(el => obs.observe(el));
 
-    // Track contact form submissions to GA
-    document.querySelector('form').addEventListener('submit', function() {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'form_submit', { event_category: 'contact', event_label: 'hero_form' });
-      }
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) { e.preventDefault(); document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' }); });
     });
+
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => { nav.style.background = window.scrollY > 40 ? 'rgba(255,255,255,0.97)' : 'rgba(255,255,255,0.92)'; }, { passive: true });
+
+    document.getElementById('formNext').value = location.href + '?sent=1';
+    if (location.search.includes('sent=1')) {
+      const fc = document.querySelector('.form-card');
+      if (fc) fc.innerHTML = `<div style="text-align:center;padding:3rem 1rem;"><div style="font-size:3rem;margin-bottom:1rem;">✨</div><h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;margin-bottom:0.5rem;">Message sent!</h3><p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;">I'll get back to you within 2–6 hours.<br>Check <strong style="color:var(--text-dark)">sameerbaber1@gmail.com</strong> for my reply.</p><a href="${location.origin}${location.pathname}" style="color:var(--accent-dark);font-size:0.85rem;font-weight:600;text-decoration:none;">← Back to site</a></div>`;
+    }
   </script>
 </body>
 </html>
